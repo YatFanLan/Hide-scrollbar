@@ -1,21 +1,28 @@
 /* ==UserStyle==
-@name           Hide-scrollbar
-@description    隐藏聊天窗口的按钮
+@name            Hide-scrollbar
+@description    隐藏滚动条
 @preprocessor   transitio
 @version        0.1.0
-@homepageURL    https://github.com/YatFanLan/Hide-scrollbat
-@author      YatFanLan
-==UserStyle==*/
+@homepageURL    https://github.com/YatFanLan/Hide-scrollbar
+@author        YatFanLan
+@var checkbox hide-expression "隐藏滚动条”功能" [1, "inline-flex", "none"]
+@var checkbox hide-collect "隐藏聊天框(滚动条)“功能”选项" [1, "inline-flex", "none"]
+==/UserStyle==*/
+
 .q-scroll-view::-webkit-scrollbar {
-  display: none;
+  display: var(--hide-expression) !important;   /* 滚动条 */
 }
 
 .q-scroll-view::-webkit-scrollbar-track {
-  display: none;
+   display: var(--hide-expression) !important;   /* 滚动条 */
 }
 
 .q-scroll-view::-webkit-scrollbar-thumb {
-  display: none;
+   display: var(--hide-expression) !important;   /* 滚动条 */
+}
+
+[data-v-7e9a4a31].v-scrollbar-thumb{
+   display: var(--hide-collect) !important;   /* 聊天框滚动条 */
 }
 
  
